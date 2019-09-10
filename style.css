@@ -175,9 +175,6 @@ border-radius: 0 0 50% 50%;
                 overflow: hidden;
                 position: relative;
             }
-            a{
-                text-decoration: none;
-            }
             #btn i{
                 display: flex;
                 justify-content: center;
