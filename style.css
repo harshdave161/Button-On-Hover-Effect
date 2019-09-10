@@ -129,6 +129,7 @@ border-radius: 0 0 50% 50%;
                       align-items: center;
                   }
                   .middle{
+                      height: 50vh;
                       margin-top: 50%;
                       margin-bottom: 20px;
                       display: grid;
