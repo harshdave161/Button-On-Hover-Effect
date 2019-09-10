@@ -6,7 +6,7 @@
 }
 @import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
 .container{
-    height: 90vh;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -115,8 +115,8 @@ border-radius: 0 0 50% 50%;
               .btn7:hover::before,.btn8:hover::before{
                   width: 0%;
               }
-
-              @media screen and (max-width:680px){
+              
+              @media(max-width:680px){
                   .container{
                       display: grid;
                       grid-template-columns: repeat(auto-fit, minmax(1,1fr));
@@ -127,6 +127,17 @@ border-radius: 0 0 50% 50%;
                       display: flex;
                       justify-content: center;
                       align-items: center;
+                  }
+                  .middle{
+                      margin-top: 50%;
+                      margin-bottom: 20px;
+                      display: grid;
+                      grid-template-columns: repeat(auto-fit,minmax(400px,2fr));
+                  }
+                  #btn{
+                      display: grid;
+                      width:50px;
+                      height: 50px;
                   }
               }
 
@@ -143,4 +154,68 @@ border-radius: 0 0 50% 50%;
                 font-size: 1.7em;
                 margin-top: 20px;
                 text-shadow: 1px 1px #3498db; 
+            }
+
+
+            .middle{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 30vh;
+            }
+            #btn{
+                display: inline-block;
+                width:90px;
+                height: 90px;
+                background: #f1f1f1;
+                margin: 10px;
+                border-radius: 30%;
+                box-shadow: 0 5px 15px #00000070;
+                color: #3498db;
+                overflow: hidden;
+                position: relative;
+            }
+            a{
+                text-decoration: none;
+            }
+            #btn i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 90px;
+                font-size: 26px;
+                transition: 0.2s linear;
+            }
+            #btn:hover i{
+                color: #f1f1f1;
+                transform: scale(1.3);
+            }
+            #btn::before{
+                content: "";
+                height: 120%;
+                width: 120%;
+                position: absolute;
+                background: #3498db;
+                transform: rotate(45deg);
+                top:90%;
+                left:-110%;
+            }
+            #btn:hover::before{
+                animation: aaa 0.7s 1;
+                top: -10%;
+                left: -10%;
+            }
+            @keyframes aaa{
+                0%{
+                    top:90%;
+                left:-110%;
+                }
+                50%{
+            left: 10%;
+            top:-30%;
+                }
+                100%{
+                    top: -10%;
+                    left: -10%;
+                }
             }
